@@ -1,0 +1,346 @@
+// App.jsx
+// Single-file React + Tailwind scaffold for the hackathon: video-first feed with multimodal search
+// Assumptions: TailwindCSS is configured in the project (e.g., create-react-app + Tailwind).
+// This component uses fetch() to call backend endpoints:
+// POST /api/search  -> accepts { prompt: string, image: base64|null } and returns { videos: [{id, videoUrl, tags, suggestions: [{id, title, price, imageUrl}]}] }
+// POST /api/engage  -> accepts { videoId, action: 'like'|'comment'|'share', comment?: string }
+
+import React, { useState, useRef } from 'react'
+
+export default function App() {
+  const [prompt, setPrompt] = useState('')
+  const [imagePreview, setImagePreview] = useState(null)
+  const [videos, setVideos] = useState([]) // feed
+  const [loading, setLoading] = useState(false)
+  const fileInputRef = useRef(null)
+
+  // Mock starter data (used when backend is not ready)
+  const mockVideos = [
+    {
+      id: 'v1',
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
+      tags: ['monsoon', 'rainy', 'casual'],
+      suggestions: [
+        { id: 'p1', title: 'Waterproof Jacket', price: '₹2,499', imageUrl: 'https://via.placeholder.com/80' },
+        { id: 'p2', title: 'Rubber Boots', price: '₹999', imageUrl: 'https://via.placeholder.com/80' }
+      ]
+    },
+    {
+      id: 'v2',
+      videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
+      tags: ['summer', 'beach'],
+      suggestions: [
+        { id: 'p3', title: 'Linen Shirt', price: '₹1,199', imageUrl: 'https://via.placeholder.com/80' }
+      ]
+    }
+  ]
+
+  // handle image upload
+  function handleFileChange(e) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => setImagePreview(reader.result)
+    reader.readAsDataURL(file)
+  }
+
+  async function handleSearch(e) {
+    e?.preventDefault()
+    setLoading(true)
+
+    try {
+      // If backend ready, send request
+      const payload = { prompt: prompt.trim() || null, image: imagePreview || null }
+
+      // Example fetch to backend (uncomment when backend available)
+      // const res = await fetch('/api/search', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(payload)
+      // })
+      // const data = await res.json()
+      // setVideos(data.videos)
+
+      // For hackathon demo, use mock data filtered by prompt
+      if (!payload.prompt && !payload.image) {
+        setVideos(mockVideos)
+      } else {
+        const q = (payload.prompt || '').toLowerCase()
+        const filtered = mockVideos.filter(v => v.tags.some(t => t.includes(q)))
+        setVideos(filtered.length ? filtered : mockVideos)
+      }
+    } catch (err) {
+      console.error(err)
+      setVideos(mockVideos)
+    }
+
+    setLoading(false)
+  }
+
+  async function handleEngage(videoId, action, comment) {
+    // send engagement to backend
+    // await fetch('/api/engage', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({ videoId, action, comment }) })
+    console.log('Engage', videoId, action, comment)
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-start justify-center p-4">
+      <div className="w-full max-w-3xl">
+
+        {/* SEARCH BAR */}
+        <form onSubmit={handleSearch} className="bg-white rounded-2xl shadow p-4 mb-4">
+          <div className="flex gap-3 items-center">
+            <div className="flex-1">
+              <input
+                value={prompt}
+                onChange={e => setPrompt(e.target.value)}
+                placeholder="Search (e.g., 'monsoon outfits') or upload an image"
+                className="w-full px-4 py-3 rounded-lg border focus:outline-none"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <input ref={fileInputRef} type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
+              <button type="button" onClick={() => fileInputRef.current.click()} className="px-4 py-2 bg-indigo-600 text-white rounded-lg">Upload Image</button>
+              <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded-lg">Search</button>
+            </div>
+          </div>
+
+          {imagePreview && (
+            <div className="mt-3">
+              <img src={imagePreview} alt="preview" className="w-32 h-32 object-cover rounded" />
+            </div>
+          )}
+        </form>
+
+        {/* FEED */}
+        <div className="space-y-6">
+          {loading && (
+            <div className="text-center">Loading...</div>
+          )}
+
+          {videos.length === 0 && !loading && (
+            <div className="text-center text-gray-500">No results. Try another prompt or upload a clearer image.</div>
+          )}
+
+          {videos.map(video => (
+            <div key={video.id} className="bg-white rounded-2xl shadow overflow-hidden">
+              <div className="relative">
+                {/* Video area: full coverage */}
+                <video className="w-full h-[60vh] object-cover bg-black" src={video.videoUrl} controls loop playsInline/>
+
+                {/* Right-side engagement bar */}
+                <div className="absolute right-3 top-1/3 flex flex-col gap-4 items-center">
+                  <button onClick={() => handleEngage(video.id, 'like')} className="flex flex-col items-center">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    <span className="text-xs">Like</span>
+                  </button>
+
+                  <button onClick={() => handleEngage(video.id, 'comment')} className="flex flex-col items-center">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span className="text-xs">Comment</span>
+                  </button>
+
+                  <button onClick={() => handleEngage(video.id, 'share')} className="flex flex-col items-center">
+                    <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v14"/></svg>
+                    <span className="text-xs">Share</span>
+                  </button>
+                </div>
+
+                {/* Bottom suggestion boxes (small) */}
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="bg-black/40 py-2 px-3 rounded backdrop-blur-sm">
+                    <div className="flex gap-2 overflow-x-auto">
+                      {video.suggestions.map(s => (
+                        <div key={s.id} className="min-w-[110px] bg-white/90 rounded p-2 flex-shrink-0">
+                          <img src={s.imageUrl} alt={s.title} className="w-full h-16 object-cover rounded" />
+                          <div className="text-xs mt-1 font-semibold">{s.title}</div>
+                          <div className="text-xs text-gray-600">{s.price}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+/*
+Backend (Flask) minimal example (create a separate file `app.py`):
+
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+@app.route('/api/search', methods=['POST'])
+def search():
+    data = request.json
+    prompt = data.get('prompt')
+    image = data.get('image')
+    # TODO: run multimodal retrieval (image embedding + text embedding) and return matching videos
+    # For demo, return hardcoded structure matching the frontend expectation
+    return jsonify({
+        'videos': [
+            {
+                'id': 'v1',
+                'videoUrl': 'https://.../video.mp4',
+                'tags': ['monsoon'],
+                'suggestions': [{'id': 'p1','title':'Item','price':'₹1000','imageUrl':'https://...'}]
+            }
+        ]
+    })
+
+@app.route('/api/engage', methods=['POST'])
+def engage():
+    data = request.json
+    # store likes/comments/shares
+    return jsonify({'status':'ok'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+Notes & next steps:
+- Integrate an image encoder (e.g., CLIP) + text encoder to implement multimodal search.
+- Store video metadata and product suggestions in a simple DB (sqlite/postgres).
+- Add authentication and analytics if needed.
+*/
+
+### Uploaded videos & how to integrate them
+
+You have uploaded several MP4 files to the environment (e.g. `/mnt/data/8970055-uhd_2160_3840_25fps.mp4`, `/mnt/data/istockphoto-2169751022-640_adpp_is.mp4`, etc.). Below are ready-to-run, copy-pasteable steps and code snippets to:
+
+1. Serve the uploaded video files from the Flask backend so the React frontend can play them.
+2. Generate thumbnails (with `ffmpeg`) for each video so the UI can show previews.
+3. Create a simple video metadata index (JSON) that the frontend can fetch as the initial feed.
+4. (Optional) Extract frame embeddings using CLIP for multimodal search.
+
+---
+
+#### 1) Serve videos with Flask (static files)
+Append this to the Flask app (or place in `app.py`). It will serve files from `/mnt/data` under `/media/` URLs:
+
+```python
+from flask import send_from_directory
+import os
+
+VIDEO_DIR = '/mnt/data'
+
+@app.route('/media/videos/<path:filename>')
+def media_videos(filename):
+    # Security: ensure filename is inside VIDEO_DIR
+    safe_path = os.path.normpath(os.path.join(VIDEO_DIR, filename))
+    if not safe_path.startswith(VIDEO_DIR):
+        return {'error': 'invalid path'}, 400
+    return send_from_directory(VIDEO_DIR, filename)
+```
+
+Your frontend can now use video URLs like: `https://<your-backend>/media/videos/8970055-uhd_2160_3840_25fps.mp4`.
+
+---
+
+#### 2) Generate thumbnails using `ffmpeg`
+Run these shell commands on the machine where videos are stored. They create a thumbnail (JPEG) for each video at 5 seconds.
+
+```bash
+mkdir -p /mnt/data/thumbnails
+ffmpeg -ss 00:00:05 -i /mnt/data/8970055-uhd_2160_3840_25fps.mp4 -frames:v 1 -q:v 2 /mnt/data/thumbnails/8970055.jpg
+# Repeat for each file, or loop
+for f in /mnt/data/*.mp4; do
+  name=$(basename "$f" .mp4)
+  ffmpeg -ss 00:00:05 -i "$f" -frames:v 1 -q:v 2 "/mnt/data/thumbnails/${name}.jpg"
+done
+```
+
+Serve thumbnails similarly from Flask (e.g., `/media/thumbnails/<name>.jpg`) using `send_from_directory`.
+
+---
+
+#### 3) Create a metadata index (Python script)
+This script scans `/mnt/data` for mp4 files and creates `video_index.json` with minimal metadata and suggestion placeholders.
+
+```python
+import os
+import json
+from pathlib import Path
+
+VIDEO_DIR = Path('/mnt/data')
+OUT = VIDEO_DIR / 'video_index.json'
+
+videos = []
+for p in VIDEO_DIR.glob('*.mp4'):
+    name = p.name
+    thumb = f'/media/thumbnails/{p.stem}.jpg'
+    videos.append({
+        'id': p.stem,
+        'videoUrl': f'/media/videos/{name}',
+        'tags': [],  # later filled by tagger/embedding
+        'thumbnail': thumb,
+        'suggestions': [
+            {'id': 'demo1', 'title': 'Demo Item', 'price': '₹999', 'imageUrl': '/media/thumbnails/demo-product.jpg'}
+        ]
+    })
+
+with open(OUT, 'w') as f:
+    json.dump({'videos': videos}, f, indent=2)
+
+print('Wrote', OUT)
+```
+
+Serve this file from Flask at `/api/videos`:
+
+```python
+@app.route('/api/videos')
+def api_videos():
+    return send_from_directory('/mnt/data', 'video_index.json')
+```
+
+Now your frontend can `fetch('/api/videos')` to populate the feed.
+
+---
+
+#### 4) (Optional) Generate CLIP embeddings for frames for multimodal search
+If you want to implement real multimodal search, extract a representative frame per video (the thumbnail) and compute text + image embeddings with CLIP. Below is a minimal example using `transformers` + `torch` (you must install `transformers`, `torch`, `Pillow`):
+
+```python
+from PIL import Image
+from transformers import CLIPProcessor, CLIPModel
+import torch
+
+model = CLIPModel.from_pretrained('openai/clip-vit-base-patch32')
+processor = CLIPProcessor.from_pretrained('openai/clip-vit-base-patch32')
+
+def embed_image(path):
+    image = Image.open(path).convert('RGB')
+    inputs = processor(images=image, return_tensors='pt')
+    with torch.no_grad():
+        img_emb = model.get_image_features(**inputs)
+    img_emb = img_emb / img_emb.norm(p=2, dim=-1, keepdim=True)
+    return img_emb[0].cpu().numpy().tolist()
+
+# save embeddings to JSON alongside video_index.json for fast retrieval
+```
+
+For prompts, compute text embeddings with the same CLIP model and compute cosine similarity to rank videos. Store embeddings in a small vector DB (FAISS, sqlite+annoy, or plain in-memory search for small datasets).
+
+---
+
+#### 5) How to plug these into the React scaffold
+- Update `mockVideos` in the React file to `fetch('/api/videos')` on mount or after a search.
+- Replace hardcoded video URLs with full backend URLs returned by `/api/videos` (they already point to `/media/videos/...`).
+- For search: send prompt + (optionally) base64 image to `/api/search`. The backend will use saved embeddings to retrieve the best-match video IDs and return the matching objects from `video_index.json`.
+
+---
+
+If you want, I can now:
+- Add the Flask endpoints (`/media/thumbnails/...`, `/media/videos/...`, `/api/videos`) directly into the canvas file as a separate `app.py` snippet, and
+- Add a small Python script (in the canvas) that auto-generates thumbnails and `video_index.json` for all MP4s in `/mnt/data`.
+
+Tell me to proceed and I will append these files into the canvas for you to copy/download.
