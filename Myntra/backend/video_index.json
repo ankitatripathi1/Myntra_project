@@ -1,254 +1,1087 @@
-{
-  "videos": [
-    {
-      "video_id": "vid001",
-      "video_url": "/videos/3403283-uhd_2160_4096_25fps.mp4",
-      "hashtags": ["skirt", "knee-length", "party"],
-      "products": [
-        {
-          "name": "pleated satin skirt",
-          "color": "shiny silver",
-          "type": "skirt",
-          "occasion": "party",
-          "price": 700,
-          "url": "https://store.com/product1",
-          "image_url": "https://cdn.com/images/skirt1.jpg"
-        },
-        {
-          "name": "Black Heels",
-          "color": "black",
-          "type": "footwear",
-          "occasion": "party",
-          "price": 800,
-          "url": "https://store.com/product2",
-          "image_url": "https://cdn.com/images/heels1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid002",
-      "video_url": "/videos/4694589-uhd_2160_4096_25fps.mp4",
-      "hashtags": ["solid", "dress"],
-      "products": [
-        {
-          "name": "solid dress with slit",
-          "color": "Beige",
-          "type": "dress",
-          "occasion": "formal",
-          "price": 1999,
-          "url": "https://store.com/product3",
-          "image_url": "https://cdn.com/images/dress1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid003",
-      "video_url": "/videos/6113041-uhd_2160_3840_24fps.mp4",
-      "hashtags": ["black", "shimmery", "dress", "party"],
-      "products": [
-        {
-          "name": "Black Party Dress",
-          "color": "Black",
-          "type": "dress",
-          "occasion": "party",
-          "price": 880,
-          "url": "https://store.com/product5",
-          "image_url": "https://cdn.com/images/dress2.jpg"
-        },
-        {
-          "name": "shimmery dress",
-          "color": "gold",
-          "type": "dress",
-          "occasion": "party",
-          "price": 1200,
-          "url": "https://store.com/product6",
-          "image_url": "https://cdn.com/images/dress3.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid004",
-      "video_url": "/videos/6802882-hd_1080_1920_30fps.mp4",
-      "hashtags": ["park", "white", "summer", "picnic"],
-      "products": [
-        {
-          "name": "white summer dress",
-          "color": "white",
-          "type": "dress",
-          "occasion": "summer",
-          "price": 999,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress4.jpg"
-        },
-        {
-          "name": "hat",
-          "color": "Beige",
-          "type": "hat",
-          "occasion": "summer",
-          "price": 1099,
-          "url": "https://store.com/product8",
-          "image_url": "https://cdn.com/images/hat1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid005",
-      "video_url": "/videos/8091545-uhd_2160_4096_24fps.mp4",
-      "hashtags": ["yellow", "floral", "v-neck", "dress", "home"],
-      "products": [
-        {
-          "name": "yellow floral dress",
-          "color": "yellow",
-          "type": "dress",
-          "occasion": "summer",
-          "price": 899,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress5.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid006",
-      "video_url": "/videos/8970055-uhd_2160_3840_25fps.mp4",
-      "hashtags": ["white", "comfortable", "cotton", "dress", "mountain", "sandal"],
-      "products": [
-        {
-          "name": "white cotton dress",
-          "color": "white",
-          "type": "dress",
-          "occasion": "trekking",
-          "price": 700,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress6.jpg"
-        },
-        {
-          "name": "hat",
-          "color": "brown",
-          "type": "hat",
-          "occasion": "trekking",
-          "price": 300,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/hat2.jpg"
-        },
-        {
-          "name": "sandal",
-          "color": "white",
-          "type": "flat sandal",
-          "occasion": "walking, trekking",
-          "price": 500,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/sandal1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid007",
-      "video_url": "/videos/11925672_2160_3840_30fps.mp4",
-      "hashtags": ["wedding", "white gown", "blazer", "bride", "groom"],
-      "products": [
-        {
-          "name": "white bridal gown",
-          "color": "white",
-          "type": "gown",
-          "occasion": "wedding",
-          "price": 65000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/gown1.jpg"
-        },
-        {
-          "name": "blue blazer, pants, shirt",
-          "color": "blue",
-          "type": "bridal suit",
-          "occasion": "wedding",
-          "price": 13000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/suit1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid008",
-      "video_url": "/videos/12176328_2160_3840_30fps.mp4",
-      "hashtags": ["Cocktail Dress", "rhine stoned", "crystal", "evening gown", "earrings", "heels"],
-      "products": [
-        {
-          "name": "white rhine stone dress",
-          "color": "white",
-          "type": "stone",
-          "occasion": "evening party",
-          "price": 10000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress7.jpg"
-        },
-        {
-          "name": "party heels",
-          "color": "white",
-          "type": "stoned heels",
-          "occasion": "party",
-          "price": 5000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/heels2.jpg"
-        },
-        {
-          "name": "Long chain earrings",
-          "color": "silver",
-          "type": "stoned",
-          "occasion": "party,wedding",
-          "price": 500,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/earrings1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid009",
-      "video_url": "/videos/12282745_1080_1920_30fps.mp4",
-      "hashtags": ["shimmery Dress", "bodycon", "golden", "hoops", "stoned"],
-      "products": [
-        {
-          "name": "shimmery bodycon dress",
-          "color": "shimmery",
-          "type": "stone",
-          "occasion": "evening party",
-          "price": 2000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress8.jpg"
-        },
-        {
-          "name": "Large gold hoops",
-          "color": "golden",
-          "type": "stoned",
-          "occasion": "party",
-          "price": 800,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/hoops1.jpg"
-        }
-      ]
-    },
-    {
-      "video_id": "vid010",
-      "video_url": "/videos/istockphoto-2169751022-640_adpp_is.mp4",
-      "hashtags": ["fitted Dress", "square neck", "Assymetric", "formal events"],
-      "products": [
-        {
-          "name": "fitted plain dress",
-          "color": "white",
-          "type": "dress",
-          "occasion": "events",
-          "price": 4000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress9.jpg"
-        },
-        {
-          "name": "Assymetric formal dress",
-          "color": "white",
-          "type": "dress",
-          "occasion": "formal events",
-          "price": 3000,
-          "url": "https://store.com/product7",
-          "image_url": "https://cdn.com/images/dress10.jpg"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "videos": [
+      {
+        "video_id": "vid001",
+        "video_url": "/videos/3403283-uhd_2160_4096_25fps.mp4",
+        "hashtags": [
+          "skirt",
+          "knee-length",
+          "party",
+          "western"
+        ],
+        "products": [
+          {
+            "name": "pleated satin skirt",
+            "color": "shiny silver gold",
+            "type": "skirt",
+            "occasion": "party",
+            "gender": "women",
+            "price": 700,
+            "url": "https://store.com/product1",
+            "image_url": "/thumbnails/pleated_skirt.png"
+          },
+          {
+            "name": "Black Heels",
+            "color": "black",
+            "type": "footwear",
+            "occasion": "party",
+            "gender": "women",
+            "price": 800,
+            "url": "https://store.com/product2",
+            "image_url": "/thumbnails/black_sandals.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid002",
+        "video_url": "/videos/4694589-uhd_2160_4096_25fps.mp4",
+        "hashtags": [
+          "solid",
+          "western dress",
+          "classic",
+          "slit"
+        ],
+        "products": [
+          {
+            "name": "solid dress with slit",
+            "color": "Beige",
+            "type": "dress",
+            "occasion": "party",
+            "gender": "women",
+            "price": 1999,
+            "url": "https://store.com/product3",
+            "image_url": "/thumbnails/slit_cut.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid003",
+        "video_url": "/videos/6113041-uhd_2160_3840_24fps.mp4",
+        "hashtags": [
+          "black",
+          "shimmery",
+          "western dress",
+          "party",
+          "fun"
+        ],
+        "products": [
+          {
+            "name": "Black Party Dress",
+            "color": "Black",
+            "type": "bodycon square neck dress",
+            "occasion": "party",
+            "gender": "women",
+            "price": 880,
+            "url": "https://store.com/product5",
+            "image_url": "/thumbnails/black_bodycon.png"
+          },
+          {
+            "name": "shimmery dress",
+            "color": "silver",
+            "type": "bodycon dress",
+            "occasion": "party",
+            "gender": "women",
+            "price": 1200,
+            "url": "https://store.com/product6",
+            "image_url": "/thumbnails/silvery_bodycon.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid004",
+        "video_url": "/videos/6802882-hd_1080_1920_30fps.mp4",
+        "hashtags": [
+          "park",
+          "white",
+          "summer",
+          "picnic",
+          "selftime",
+          "peace",
+          "monsoon",
+          "western dress"
+        ],
+        "products": [
+          {
+            "name": "white summer frock with puff sleeves ",
+            "color": "white",
+            "type": "dress",
+            "occasion": "summer",
+            "gender": "women",
+            "price": 999,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_puff_sleeved_frock.png"
+          },
+          {
+            "name": "hat",
+            "color": "Beige",
+            "type": "hat",
+            "occasion": "summer",
+            "gender": "women",
+            "price": 1099,
+            "url": "https://store.com/product8",
+            "image_url": "/thumbnails/beige_hat.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid005",
+        "video_url": "/videos/8091545-uhd_2160_4096_24fps.mp4",
+        "hashtags": [
+          "yellow",
+          "floral",
+          "v-neck",
+          "dress",
+          "home",
+          "summer",
+          "MONSOON",
+          "western dress"
+        ],
+        "products": [
+          {
+            "name": "yellow floral dress with v-neck",
+            "color": "yellow",
+            "type": "dress",
+            "occasion": "summer",
+            "gender": "women",
+            "price": 899,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/yellow_floral.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid006",
+        "video_url": "/videos/8970055-uhd_2160_3840_25fps.mp4",
+        "hashtags": [
+          "white",
+          "comfortable",
+          "cotton",
+          "dress",
+          "mountain",
+          "sandal",
+          "adventure",
+          "monsoon",
+          "western dress"
+        ],
+        "products": [
+          {
+            "name": "white cotton dress",
+            "color": "white",
+            "type": "dress",
+            "occasion": "trekking",
+            "gender": "women",
+            "price": 700,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_dress.png"
+          },
+          {
+            "name": "hat",
+            "color": "brown",
+            "type": "hat",
+            "occasion": "trekking",
+            "gender": "women",
+            "price": 300,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/brown_hat.png"
+          },
+          {
+            "name": "sandal",
+            "color": "white",
+            "type": "flat sandal",
+            "occasion": "walking, trekking",
+            "gender": "women",
+            "price": 500,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_sandals.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid007",
+        "video_url": "/videos/11925672_2160_3840_30fps.mp4",
+        "hashtags": [
+          "wedding",
+          "white gown",
+          "blazer",
+          "bride",
+          "groom"
+        ],
+        "products": [
+          {
+            "name": "white bridal gown",
+            "color": "white",
+            "type": "gown",
+            "occasion": "wedding",
+            "gender": "women",
+            "price": 65000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/bride_dress.png"
+          },
+          {
+            "name": "black blazer",
+            "color": "black",
+            "type": "bridegroom suit",
+            "occasion": "wedding",
+            "gender": "men",
+            "price": 13000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/black_suit.png"
+          },
+          {
+            "name": "black pants",
+            "color": "black",
+            "type": "bridegroom suit pants",
+            "occasion": "wedding",
+            "gender": "men",
+            "price": 10000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/black_pants.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid008",
+        "video_url": "/videos/12176328_2160_3840_30fps.mp4",
+        "hashtags": [
+          "Cocktail Dress",
+          "rhine stoned",
+          "crystal",
+          "gown",
+          "earrings",
+          "heels",
+          "shine",
+          "western dress"
+        ],
+        "products": [
+          {
+            "name": "white rhine stone dress",
+            "color": "white",
+            "type": "western gown",
+            "occasion": "party",
+            "gender": "women",
+            "price": 10000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/rhinestone_dress.png"
+          },
+          {
+            "name": "party heels",
+            "color": "white",
+            "type": "heels",
+            "occasion": "party",
+            "gender": "women",
+            "price": 5000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_heels.png"
+          },
+          {
+            "name": "Long chain earrings",
+            "color": "silver",
+            "type": "stoned",
+            "occasion": "party,wedding",
+            "gender": "women",
+            "price": 500,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/long_earrings.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid009",
+        "video_url": "/videos/12282745_1080_1920_30fps.mp4",
+        "hashtags": [
+          "shimmery Dress",
+          "bodycon",
+          "golden",
+          "hoops",
+          "stoned",
+          "beach",
+          "party",
+          "western dress"
+        ],
+        "products": [
+          {
+            "name": "shimmery bodycon dress",
+            "color": "shimmery golden",
+            "type": "dress",
+            "occasion": "evening party",
+            "gender": "women",
+            "price": 20000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/golden.png"
+          },
+          {
+            "name": "Large gold hoops",
+            "color": "golden",
+            "type": "earring",
+            "occasion": "party",
+            "gender": "women",
+            "price": 800,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/hoops.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid010",
+        "video_url": "/videos/istockphoto-2169751022-640_adpp_is.mp4",
+        "hashtags": [
+          "fitted Dress",
+          "square neck",
+          "Assymetric",
+          "women"
+        ],
+        "products": [
+          {
+            "name": "fitted plain top",
+            "color": "white",
+            "type": "dress",
+            "occasion": "formal",
+            "gender": "women",
+            "price": 4000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_top.png"
+          },
+          {
+            "name": "plain white skirt",
+            "color": "white",
+            "type": "dress",
+            "occasion": "formal",
+            "gender": "women",
+            "price": 3000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_skirt.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid011",
+        "video_url": "/videos/WhatsApp Video 2025-09-16 at 12.00.39 AM.mp4",
+        "hashtags": [
+          "fitted anarkali",
+          "frock",
+          "royal",
+          "traditional",
+          "beauty"
+        ],
+        "products": [
+          {
+            "name": "blue  frock gown",
+            "color": "blue",
+            "type": "traditional gown, suit",
+            "occasion": "traditional events",
+            "gender": "women",
+            "price": 4000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/blue_frock.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid012",
+        "video_url": "/videos/WhatsApp Video 2025-09-16 at 12.05.29 AM.mp4",
+        "hashtags": [
+          "white",
+          "casual",
+          "aesthetic",
+          "royal",
+          "men",
+          "classy"
+        ],
+        "products": [
+          {
+            "name": "blue shirt",
+            "color": "blue",
+            "type": "shirt",
+            "occasion": "dailywear",
+            "gender": "men",
+            "price": 400,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/blue_shirt.png"
+          },
+          {
+            "name": "white pants",
+            "color": "white",
+            "type": "pant",
+            "occasion": "dailywear",
+            "gender": "men",
+            "price": 400,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white pants.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid013",
+        "video_url": "/videos/shirt.mp4",
+        "hashtags": [
+          "white",
+          "office",
+          "formal",
+          "meeting"
+        ],
+        "products": [
+          {
+            "name": "light blue formal shirt",
+            "color": "blue",
+            "type": "shirt",
+            "occasion": "office",
+            "gender": "men",
+            "price": 999,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/off_light_blue_shirt.png"
+          },
+          {
+            "name": "brown belt",
+            "color": "brown",
+            "type": "belt",
+            "occasion": "formal",
+            "gender": "men",
+            "price": 999,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/brown belt.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid014",
+        "video_url": "/videos/tie.mp4",
+        "hashtags": [
+          "office",
+          "formal",
+          "meeting",
+          "interview",
+          "accessories"
+        ],
+        "products": [
+          {
+            "name": "yellow tie",
+            "color": "yellow golden",
+            "type": "tie",
+            "occasion": "formal",
+            "gender": "men",
+            "price": 500,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/tie.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid015",
+        "video_url": "/videos/shoes_and_bag.mp4",
+        "hashtags": [
+          "office",
+          "formal",
+          "meeting",
+          "footwear",
+          "bag",
+          "accessories"
+        ],
+        "products": [
+          {
+            "name": " formal shoes",
+            "color": "black",
+            "type": "shoes",
+            "occasion": "office",
+            "gender": "men",
+            "price": 5000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/formal_shoes.png"
+          },
+          {
+            "name": "leather bag",
+            "color": "brown",
+            "type": "bag",
+            "occasion": "office formal",
+            "gender": "men",
+            "price": 1000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/leather_bag.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid016",
+        "video_url": "/videos/WhatsApp Video 2025-09-21 at 1.24.56 PM.mp4",
+        "hashtags": [
+          "gown",
+          "ethnic",
+          "religious",
+          "traditional"
+        ],
+        "products": [
+          {
+            "name": "gown",
+            "color": "Red",
+            "type": "round-neck suit,traditional gown",
+            "occasion": "traditional",
+            "gender": "women",
+            "price": 1500,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/red_suit.jpeg"
+          },
+          {
+            "name": "gown",
+            "color": "Maroon",
+            "type": "v-neck suit ,traditional gown",
+            "occasion": "traditional",
+            "gender": "women",
+            "price": 1800,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/maroon_suit.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid017",
+        "video_url": "/videos/brown_pant.mp4",
+        "hashtags": [
+          "office",
+          "formal",
+          "meeting"
+        ],
+        "products": [
+          {
+            "name": " brown pants",
+            "color": "brown",
+            "type": "pants",
+            "occasion": "office",
+            "gender": "men",
+            "price": 5000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/brown_pants.png"
+          },
+          {
+            "name": "watch",
+            "color": "golden",
+            "type": "watch",
+            "occasion": "office",
+            "gender": "men",
+            "price": 50000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/watch.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid018",
+        "video_url": "/videos/little_clips.mp4",
+        "hashtags": [
+          "hair accessories","cute",
+          "college"
+        ],
+        "products": [
+          {
+            "name": "hair clips",
+            "color": "multi-color",
+            "type": "clip",
+            "occasion": "casual",
+            "gender": "women",
+            "price": 100,
+            "url": "https://store.com/product18",
+            "image_url": "/thumbnails/little_clips.jpeg"
+          }
+        ]
+      },
+      {
+        "video_id": "vid019",
+        "video_url": "/videos/red_full_kurta.mp4",
+        "hashtags": [
+          "traditional","festive","aesthetic","party","marriage"
+        ],
+        "products": [
+          {
+            "name": "long sleeve full kurta",
+            "color": "red",
+            "type": "kurta",
+            "occasion": "festival",
+            "gender": "men",
+            "price": 2200,
+            "url": "https://store.com/product19",
+            "image_url": "/thumbnails/red_long_kurta.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid020",
+        "video_url": "/videos/nude_lipstick.mp4",
+        "hashtags": [
+          "lipstick","beauty","face","makeup"
+        ],
+        "products": [
+          {
+            "name": "lipstick",
+            "color": "red",
+            "type": "make up",
+            "occasion": "party,daily",
+            "gender": "women",
+            "price": 1500,
+            "url": "https://store.com/product20",
+            "image_url": "/thumbnails/nude_lipstick.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid021",
+        "video_url": "/videos/girls_watch.mp4",
+        "hashtags": [
+          "party",
+          "office",
+          "accessories",
+          "formal"
+        ],
+        "products": [
+          {
+            "name": "gold watch",
+            "color": "golden white",
+            "type": "watch",
+            "occasion": "formal,casual",
+            "gender": "women",
+            "price": 12000,
+            "url": "https://store.com/product21",
+            "image_url": "/thumbnails/golden_watch_girls.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid022",
+        "video_url": "/videos/pendant.mp4",
+        "hashtags": [
+          "dailywear","accessories","neck-accesories","multi-purpose","necklace"
+        ],
+        "products": [
+          {
+            "name": "pandant",
+            "color": "diamond gold",
+            "type": "necklace pandant",
+            "occasion": "dailywear",
+            "gender": "women",
+            "price": 1800,
+            "url": "https://store.com/product22",
+            "image_url": "/thumbnails/pendant.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid023",
+        "video_url": "/videos/oxidised_jhumka.mp4",
+        "hashtags": [
+          "ear accessories","make up","traditional","aesthetic","long ,round earrings","oxidised","party","festival"
+        ],
+        "products": [
+          {
+            "name": "double round jhumka",
+            "color": "oxidised silver",
+            "type": " earring",
+            "occasion": "traditional",
+            "gender": "women",
+            "price": 500,
+            "url": "https://store.com/product23",
+            "image_url": "/thumbnails/oxidised_round_earring.png"
+          },
+          {
+            "name": "peacock style jhumka",
+            "color": "oxidised gold",
+            "type": "earring",
+            "occasion": "party",
+            "gender": "women",
+            "price": 200,
+            "url": "https://store.com/product23a",
+            "image_url": "/thumbnails/gold_oxidised_earring.png"
+          },
+          {
+            "name": "rectangular earrings",
+            "color": "silver",
+            "type": "mirror jhumka",
+            "occasion": "festival",
+            "gender": "women",
+            "price": 800,
+            "url": "https://store.com/product23",
+            "image_url": "/thumbnails/oxidised_rectangular.png"
+          },
+          {
+            "name": "round mirror jhumka",
+            "color": "oxidised silver",
+            "type": "earring",
+            "occasion": "traditional",
+            "gender": "women",
+            "price": 600,
+            "url": "https://store.com/product23",
+            "image_url": "/thumbnails/oxidised_mirror_earring.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid024",
+        "video_url": "/videos/flat_sandals.mp4",
+        "hashtags": [
+          "dailywear","footwear","multi-purpose","flats","dailyuse"
+        ],
+        "products": [
+          {
+            "name": "flat sandals",
+            "color": "beige",
+            "type": "footwear",
+            "occasion": "dailywear",
+            "gender": "women",
+            "price": 1800,
+            "url": "https://store.com/product22",
+            "image_url": "/thumbnails/flat_sandals.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid025",
+        "video_url": "/videos/black_jeans_girls.mp4",
+        "hashtags": ["faded black jeans", "losse fit","baggy","wide-leg"],
+        "products": [
+           {"name": " faded black jeans",
+            "color": "black",
+            "type": "jeans",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 1200,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/black_girls_jeans.png"}
+        ]
+      },
+
+      
+      {
+        "video_id": "vid026",
+        "video_url": "/videos/blue_jeans_girls.mp4",
+        "hashtags": ["light blue", "high waist","wide-leg","baggy","loose fit"],
+        "products": [
+           {"name": "blue jeans",
+            "color": "blue",
+            "type": "jeans",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 1200,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/blue_girls_jeans.png"}
+        ]
+      },
+
+
+      
+      {
+        "video_id": "vid027",
+        "video_url": "/videos/fullsleeve_tops.mp4",
+        "hashtags": ["strech fit", "long sleeves","full sleeves", "tops","bodycon", "textured"],
+        "products": [
+           {"name": "fitted top",
+            "color": "white",
+            "type": "bodycon",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 800,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_full_sleeve_top.png"},
+
+            {"name": "crop top",
+            "color": "black",
+            "type": "bodycon",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 900,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/black_bodycon_top.png"},
+
+            
+            {"name": " crop top",
+            "color": "Red",
+            "type": "bodycon",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 700,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/red_bodycon_top.jpeg"}
+          
+        ]
+      },
+
+         
+      {
+        "video_id": "vid028",
+        "video_url": "/videos/white_clutcher.mp4",
+        "hashtags": ["clutcher","hair clips","hair-accessories"],
+        "products": [
+           {"name": "hair clutcher",
+            "color": "white",
+            "type": "clutcher",
+            "occasion": "hair accessories",
+            "gender":"women",
+            "price": 100,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_clutcher.png"}
+        ]
+      },
+
+     
+      {
+        "video_id": "vid029",
+        "video_url": "/videos/girl_vneck_top.mp4",
+        "hashtags": ["tops","red","olive green","v neck","tshirt", "comfortable","casual","dailywear"],
+        "products": [
+           {"name": "vneck top",
+            "color": "red",
+            "type": "women tops",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 700,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/red_top_vneck.png"},
+
+            {"name": "v-neck top",
+            "color": "olive green",
+            "type": "women tops",
+            "occasion": "casual",
+            "gender":"women",
+            "price": 600,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/green_vnecktop.png"}
+            
+        ]
+      },
+
+      {
+        "video_id": "vid030",
+        "video_url": "/videos/red_lipstick.mp4",
+        "hashtags": ["lipstick","red","matte","cosmetics","maroon","make up","makeup"],
+        "products": [
+           {"name": "classic lipstick",
+            "color": "red",
+            "type": "lipstick",
+            "occasion": "wedding party",
+            "gender":"women",
+            "price": 800,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/red_lipstick.png"}
+        ]
+      },
+
+
+      {
+        "video_id": "vid031",
+        "video_url": "/videos/hair_korean_clip.mp4",
+        "hashtags": ["korean","hair claw clips","cute","stylish"],
+        "products": [
+           {"name": "women clips",
+            "color": "white gold",
+            "type": "korean clips",
+            "occasion": "hair accessories",
+            "gender":"women",
+            "price": 1000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/korean_clip.png"}
+        ]
+      },
+
+      {
+        "video_id": "vid032",
+        "video_url": "/videos/diamond_earrings.mp4",
+        "hashtags": ["diamond","earrings","royal", "studs","minimal","small"],
+        "products": [
+           {"name": "diamond earrings",
+            "color": "silver",
+            "type": "studs",
+            "occasion":"casual",
+            "gender":"women",
+            "price": 50000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/studs.jpeg"}
+        ]
+      },
+
+      {
+        "video_id": "vid033",
+        "video_url": "/videos/blue_jeans_men.mp4",
+        "hashtags": ["baggy jeans", "blue", "comfortable", "loose fit"],
+        "products": [
+           {"name": "plain jeans",
+            "color": " blue",
+            "type": "baggy",
+            "occasion": "casual",
+            "gender":"men",
+            "price": 2000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/men_blue_pants.png"}
+        ]
+      },
+
+      
+      {
+        "video_id": "vid034",
+        "video_url": "/videos/grey_cargo.mp4",
+        "hashtags": ["cargo pants","pockets","joggers","casual","dailywaer"],
+        "products": [
+           {"name": "cargo",
+            "color": "grey",
+            "type": "cargo pants",
+            "occasion": "casual",
+            "gender":"men",
+            "price": 450,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/grey_cargo.png"},
+
+            {"name": "cargo",
+            "color": "olive green",
+            "type": " green cargo pants",
+            "occasion": "casual",
+            "gender":"men",
+            "price": 550,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/olive_cargo.png"}
+        ]
+      },
+      {
+        "video_id": "vid035",
+        "video_url": "/videos/beige_tshirt.mp4",
+        "hashtags": ["lined","shirt", "casual", "aesthetic","dailywear" ],
+        "products": [
+          {
+            "name": "beige t-shirt",
+            "color": "beige",
+            "type": "t-shirt",
+            "occasion": "dailywear",
+            "gender":"men",
+            "price": 499,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/beige_shirt.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid036",
+        "video_url": "/videos/red_kurta.mp4",
+        "hashtags": ["Red","kurta", "traditional", "festive", "elegant" ],
+        "products": [
+          {
+            "name": "red short kurta",
+            "color": "Red",
+            "type": "kurta",
+            "occasion": "traditional events",  
+            "gender":"men",
+            "price": 899,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/red_short_kurta.png"
+          },
+          {
+            "name": "white pajama",
+            "color": "white",
+            "type": "pajama",
+            "occasion": "traditional events",
+            "gender":"men",
+            "price": 599,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/white_pajama.jpeg"
+          }
+        ]
+      },
+      {
+        "video_id": "vid037",
+        "video_url": "/videos/blue_full_tshirt.mp4",
+        "hashtags": ["Blue","Green","tshirt", "casual","lined" ],
+        "products": [
+          {
+            "name": "blue full tshirt",
+            "color": "blue",
+            "type": "tshirt",
+            "occasion": "dailywear",
+            "gender":"men",
+            "price": 599,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/blue_lined_fullsleeve.png"
+          },
+          {
+            "name": "green full tshirt",
+            "color": "green",
+            "type": "tshirt",
+            "occasion": "dailywear",
+            "gender":"men",
+            "price": 599, 
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/green_full_tshirt.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid038",
+        "video_url": "/videos/orange_suit.mp4",
+        "hashtags": ["Orange","purple","suit", "festive", "traditional", "elegant","gown","frock","party" ],
+        "products": [
+          {
+            "name": "orange suit",
+            "color": "orange",
+            "type": "traditional gown,suit",
+            "occasion": "traditional events",
+            "gender":"women",
+            "price": 1200,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/orange_kurta.png"
+          },
+          {
+            "name": "purple suit",
+            "color": "purple violet",
+            "type": "suit,traditional gown",
+            "occasion": "traditional events",
+            "gender":"women",
+            "price": 1300,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/violet_kurta.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid039",
+        "video_url": "/videos/green_saree.mp4",
+        "hashtags": ["saree", "traditional", "festive", "elegant","georgette" ],
+        "products": [
+          {
+            "name": "green saree",
+            "color": "green",
+            "type": "saree",
+            "occasion": "traditional events",
+            "gender":"women",
+            "price": 1500,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/green_saree.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid040",
+        "video_url": "/videos/blue_saaree.mp4",
+        "hashtags": ["saree", "traditional", "festive", "elegant","silk" ],
+        "products": [ 
+          {
+            "name": "blue saree",
+            "color": "blue",
+            "type": "saree",
+            "occasion": "traditional events",
+            "gender":"women",
+            "price": 1800,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/blue_saree.png"
+          }
+        ]
+      },
+      {
+        "video_id": "vid041",
+        "video_url": "/videos/eid_suit.mp4",
+        "hashtags": ["Pastel","suit", "festive", "traditional", "elegant","gown","frock","eid" ],
+        "products": [ 
+          {
+            "name": "pastel blue suit",
+            "color": "pastel blue",
+            "type": "traditional gown,suit",
+            "occasion": "traditional events",
+            "gender":"women",
+            "price": 2000,
+            "url": "https://store.com/product7",
+            "image_url": "/thumbnails/eid_suit.png"
+          }
+        ]
+      }
+    ]
+  }
